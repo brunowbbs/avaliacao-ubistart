@@ -6,18 +6,55 @@ body {
 }
 
 input {
+  outline: none;
+}
+
+.input {
   @apply border rounded w-full px-2 py-1 bg-white;
 }
 
 button {
-  @apply bg-blue-500 text-white px-8 py-[5px] rounded cursor-pointer;
+  @apply text-white  h-[34px] rounded cursor-pointer;
 }
 
 button:hover {
-  @apply bg-blue-600 transition;
+  @apply transition bg-[#08179c];
 }
 
 span {
   @apply text-red-400 text-sm;
   width: auto;
+}
+
+.span-success {
+  @apply text-green-400 text-sm;
+  width: auto;
+}
+
+.span-search {
+  @apply text-white text-sm;
+  width: auto;
+}
+
+.container-input {
+  @apply border rounded w-full px-2 py-1 bg-white flex justify-between items-center;
+}
+
+.loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #bebebe;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
