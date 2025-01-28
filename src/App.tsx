@@ -71,6 +71,9 @@ const App = () => {
   const { mutate: deleteUserMutation, isPending: isPendingDeleteUser } =
     useMutation({
       mutationFn: (id: string) => deleteUser(id),
+      onSuccess: () => {
+        refetchUsers();
+      },
     });
 
   const onSubmit = async (formData: FormData) => {
