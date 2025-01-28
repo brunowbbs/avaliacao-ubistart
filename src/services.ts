@@ -8,7 +8,7 @@ export const getCEPStatus = async (
   try {
     const sanitizedCEP = cep.replace(/\D/g, "");
     return await axios.get(
-      `https://brasilapi.com.br/api/cep/v1/${sanitizedCEP}`
+      `https://brasilapi.com.br/api/cep/v2/${sanitizedCEP}`
     );
     // eslint-disable-next-line
   } catch (error: any) {

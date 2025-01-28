@@ -62,9 +62,6 @@ const App = () => {
     mutationFn: ({ id, data }: { id: string; data: FormData }) =>
       putUser(id, data),
     onSuccess: () => {
-      toast("Usuário editado com sucesso", {
-        style: { background: "green", color: "#fff" },
-      });
       setEditingId("");
       refetchUsers();
       reset({ nome: "", email: "", cep: "" });
@@ -74,12 +71,6 @@ const App = () => {
   const { mutate: deleteUserMutation, isPending: isPendingDeleteUser } =
     useMutation({
       mutationFn: (id: string) => deleteUser(id),
-      onSuccess: () => {
-        toast("Usuário removido com sucesso", {
-          style: { background: "green", color: "#fff" },
-        });
-        refetchUsers();
-      },
     });
 
   const onSubmit = async (formData: FormData) => {
