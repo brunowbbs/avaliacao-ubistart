@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Poppins", serif;
+  background-color: #050915;
+}
+
+input {
+  @apply border rounded w-full px-2 py-1 bg-white;
+}
+
+button {
+  @apply bg-blue-500 text-white px-8 py-[5px] rounded cursor-pointer;
+}
+
+button:hover {
+  @apply bg-blue-600 transition;
+}
+
+span {
+  @apply text-red-400 text-sm;
+  width: auto;
+}
